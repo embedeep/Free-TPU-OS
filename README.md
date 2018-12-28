@@ -8,4 +8,4 @@ Format the SD-card into two partitions-one for root file system(rootfs), the oth
   *git clone https://github.com/embedeep/Free-TPU-OS/tree/master/Ubuntu*    
 * mount SD-card, and untar the rootfs to the rootfs partition(/dev/xxx)  
   *mkdir rootfs && mount /dev/xxx rootfs*  
-  *cd Ubuntu && cat rootfs_ubuntu.\* | args -n tar xzf -C rootfs*
+  *cd Ubuntu && cat rootfs_ubuntu16.\* > rootfs_ubuntu16.tar.gz && tar xzf rootfs_ubuntu16.tar.gz -C rootfs*
