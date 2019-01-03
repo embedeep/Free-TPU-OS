@@ -5,10 +5,10 @@ Free TPU OS is linux system running on the zyqn-7000 FPGA.Users can run the Free
 Format the SD-card into two partitions-one for root file system(rootfs), the other one for boot. Skip this step, if you have format the SD-card. Otherwise, do as following(run as a root):  
 * check SD-card partition(Mine is /dev/sdc)  
 *fdisk -l*   
-![](https://github.com/embedeep/Free-TPU-OS/tree/master/images/fdisk_l.png)  
+![](https://github.com/embedeep/Free-TPU-OS/blob/master/images/fdisk_l.png)  
 * Partition  
 *fdisk /dev/sdc  
-![](https://github.com/embedeep/Free-TPU-OS/tree/master/images/fdisk_sdc.png)  
+![](https://github.com/embedeep/Free-TPU-OS/blob/master/images/fdisk_sdc.png)  
 
 
 
