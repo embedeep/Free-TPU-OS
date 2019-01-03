@@ -9,14 +9,14 @@ Format the SD-card into two partitions-one for root file system(rootfs), the oth
 * Ready to partition  
 *fdisk /dev/sdc*  
 ![](https://github.com/embedeep/Free-TPU-OS/blob/master/images/fdisk_sdc.png)  
-* Create boot partition
+* Create boot partition  
 *enter "n" -> "p" -> default -> +200M(size of boot partition)*  
 ![](https://github.com/embedeep/Free-TPU-OS/blob/master/images/fdisk_bootn.png)
 * Enable boot partition bootable  
 *enter "a"*    
 ![](https://github.com/embedeep/Free-TPU-OS/blob/master/images/fdisk_boota.png) 
 * Create root partition  
-*enter "n" -> all default
+*enter "n" -> all default  
 ![](https://github.com/embedeep/Free-TPU-OS/blob/master/images/fdisk_rootfsn.png) 
 * Finish the partition  
 *enter "w"*  
