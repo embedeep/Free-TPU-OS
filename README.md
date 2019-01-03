@@ -6,28 +6,37 @@ Format the SD-card into two partitions-one for root file system(rootfs), the oth
 * check SD-card partition(Mine is /dev/sdc)  
 *fdisk -l*   
 ![](https://github.com/embedeep/Free-TPU-OS/blob/master/images/fdisk_l.png)  
-* Ready to partition  
+* Start to partition  
 *fdisk /dev/sdc*  
 ![](https://github.com/embedeep/Free-TPU-OS/blob/master/images/fdisk_sdc.png)  
 * Create boot partition  
-*enter "n" -> "p" -> default -> +200M(size of boot partition)*  
+*Enter "n" -> "p" -> default -> +200M(size of boot partition)*  
 ![](https://github.com/embedeep/Free-TPU-OS/blob/master/images/fdisk_bootn.png)
 * Enable boot partition bootable  
-*enter "a"*    
+*Enter "a"*    
 ![](https://github.com/embedeep/Free-TPU-OS/blob/master/images/fdisk_boota.png) 
 * Create root partition  
-*enter "n" -> all default  
+*Enter "n" -> all default*  
 ![](https://github.com/embedeep/Free-TPU-OS/blob/master/images/fdisk_rootfsn.png) 
 * Finish the partition  
-*enter "w"*  
+*Enter "w"*  
 ![](https://github.com/embedeep/Free-TPU-OS/blob/master/images/fdisk_f.png)
 * Format the partition  
 *mkfs.vfat -F 32 -n boot /dev/sdc1*  
 *mkfs.ext4 -L root /dev/sdc2*
 
 ## 2. Copy OS
+* Download [boot](https://github.com/embedeep/Free-TPU)  
+*git clone https://github.com/embedeep/Free-TPU  
 * Download [rootfs](https://github.com/embedeep/Free-TPU-OS)  
-  *git clone https://github.com/embedeep/Free-TPU-OS*    
-* mount SD-card, and untar the rootfs to the rootfs partition(/dev/xxx)  
-  *mkdir rootfs && mount /dev/xxx rootfs*  
-  *cd Ubuntu && cat rootfs_ubuntu16.\* > rootfs_ubuntu16.tar.gz && tar xzf rootfs_ubuntu16.tar.gz -C rootfs*
+*git clone https://github.com/embedeep/Free-TPU-OS*    
+* mount SD-card, then untar the rootfs to the rootfs partition(/dev/sdc2), and cp boot files to boot patition.  
+  *mkdir rootfs && mount /dev/sdc2 rootfs*  
+  *cd Ubuntu && cat rootfs_ubuntu16.\* > rootfs_ubuntu16.tar.gz && tar xzf rootfs_ubuntu16.tar.gz -C rootfs*  
+  *mkdir boot && mount /dev/sdc1 boot*  
+  *cp bootfiles boot*  
+  *umount boot rootfs*
+## 3. Run the system
+Prepare The development board, and set board boot from SD-card. Then insert the SD-card, start the system.  
+### 3.1 Excute on the serial Terminal
+Connect the UART to your PC, and open the serial Terminal([putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html "Download putty"), or the other serial Terminals). Set the baudrate 115200, then power-on the board.
