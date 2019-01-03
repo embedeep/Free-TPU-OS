@@ -1,8 +1,9 @@
 # Free TPU OS  
 Free TPU OS is linux system running on the zyqn-7000 FPGA.Users can run the Free TPU BIN on the system  
-* [Getting start](#Getting)
-* [Copy OS](#Copy)
-* [Run the system](#Run)
+* [Getting start](#start)
+* [Copy OS](#OS)
+* [Run the system](#system)
+<a name="start"></a>
 # Getting start
 ## 1. Prepare SD-card
 Format the SD-card into two partitions-one for root file system(rootfs), the other one for boot. Skip this step, if you have format the SD-card. Otherwise, do as following(run as a root):  
@@ -26,8 +27,8 @@ Format the SD-card into two partitions-one for root file system(rootfs), the oth
 ![](https://github.com/embedeep/Free-TPU-OS/blob/master/images/fdisk_f.png)
 * Format the partition  
 *mkfs.vfat -F 32 -n boot /dev/sdc1*  
-*mkfs.ext4 -L root /dev/sdc2*
-
+*mkfs.ext4 -L root /dev/sdc2*  
+<a name="OS"></a>
 ## 2. Copy OS
 * Download [boot](https://github.com/embedeep/Free-TPU)  
 *git clone https://github.com/embedeep/Free-TPU  
@@ -41,6 +42,7 @@ Format the SD-card into two partitions-one for root file system(rootfs), the oth
   *umount boot rootfs*
 * (optional) Copy free-TPU bin to rootfs  
 *cp binfiles rootfs/home/linaro*
+<a name="system"></a>
 ## 3. Run the system
 Prepare The development board, and set board boot from SD-card. Then insert the SD-card, start the system.  
 ### 3.1 Connect UART
