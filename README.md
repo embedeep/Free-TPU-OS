@@ -1,5 +1,8 @@
 # Free TPU OS  
-Free TPU OS is linux system running on the zyqn-7000 FPGA.Users can run the Free TPU BIN on the system
+Free TPU OS is linux system running on the zyqn-7000 FPGA.Users can run the Free TPU BIN on the system  
+* [Getting start](#Getting)
+* [Copy OS](#Copy)
+* [Run the system](#Run)
 # Getting start
 ## 1. Prepare SD-card
 Format the SD-card into two partitions-one for root file system(rootfs), the other one for boot. Skip this step, if you have format the SD-card. Otherwise, do as following(run as a root):  
@@ -36,7 +39,14 @@ Format the SD-card into two partitions-one for root file system(rootfs), the oth
   *mkdir boot && mount /dev/sdc1 boot*  
   *cp bootfiles boot*  
   *umount boot rootfs*
+* (optional) Copy free-TPU bin to rootfs  
+*cp binfiles rootfs/home/linaro*
 ## 3. Run the system
 Prepare The development board, and set board boot from SD-card. Then insert the SD-card, start the system.  
-### 3.1 Excute on the serial Terminal
-Connect the UART to your PC, and open the serial Terminal([putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html "Download putty"), or the other serial Terminals). Set the baudrate 115200, then power-on the board.
+### 3.1 Connect UART
+Connect the UART to your PC, and open the serial Terminal([putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html "Download putty"), or the other serial terminals). Set the baudrate to 115200, then power-on the board.
+### 3.2 Configure network
+Make sure the network cable inserted. Based on step 3.1, on the serial terminal Enter:
+*ifconfig eth0 xxx.xxx.xxx.xxx*
+*ifconfig eth0 up*
+### 3.3 Connect ssh and upload bin
