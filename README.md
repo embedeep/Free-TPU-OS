@@ -48,7 +48,10 @@ Prepare The development board, and set board boot from SD-card. Then insert the 
 ### 3.1 Connect UART
 Connect the UART to your PC, and open the serial Terminal([putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html "Download putty"), or the other serial terminals). Set the baudrate to 115200, then power-on the board.
 ### 3.2 Configure network
-Make sure the network cable inserted. Based on step 3.1, on the serial terminal Enter:
-*ifconfig eth0 xxx.xxx.xxx.xxx*
+Make sure the network cable inserted. Based on step 3.1, on the serial terminal Enter:  
+*ifconfig eth0 xxx.xxx.xxx.xxx*  
 *ifconfig eth0 up*
-### 3.3 Connect ssh and upload bin
+### 3.3 Connect SSH and upload bin  
+As above, user can copy execution bins to rootfs, and run the EEP-program on the serial terminal. Alternative, user can connect the system running on the board with SSH:  
+*ssh username@xxx.xxx.xxx.xxx(ipaddr)*  
+Login in SSH, user upload the bin and execute it on the SSH terminal.
