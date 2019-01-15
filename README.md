@@ -29,7 +29,7 @@ Format the SD-card into two partitions-one for root file system(rootfs), the oth
 *Enter "w"*  
 ![](https://github.com/embedeep/Free-TPU-OS/blob/master/images/fdisk_f.png)
 * Format the partition  
-*mkfs.vfat -F 32 -n boot /dev/sdc1*  
+*mkfs.vfat -F 32 -s 2 -n boot /dev/sdc1*  
 *mkfs.ext4 -L root /dev/sdc2*  
 <a name="OS"></a>
 ## 2. Copy OS
