@@ -3,6 +3,7 @@ Free TPU OS is linux system running on the zyqn-7000 FPGA.Users can run the Free
 * [Getting start](#start)
 * [Copy OS](#OS)
 * [Run the system](#system)
+* [Appendix-PS configuration](#appendix)
 <a name="start"></a>
 # Getting start
 ## 1. Prepare SD-card
@@ -60,4 +61,11 @@ or configure the network:
 ### 3.3 Connect SSH and upload bin  
 As above, user can copy execution bins to rootfs, and run the EEP-program on the serial terminal. Alternative, user can connect the system running on the board with SSH:  
 *ssh username@xxx.xxx.xxx.xxx(ipaddr)*  
-Login in SSH, user can upload the bin and execute it on the SSH terminal.
+Login in SSH, user can upload the bin and execute it on the SSH terminal.  
+<a name="appendix"></a>
+# Appendix-PS configuration
+* zc702  
+Peripherals|Descriptions|MIO pins  
+:---:|:---:|:---:|:---:  
+USB
+* zedboard  
