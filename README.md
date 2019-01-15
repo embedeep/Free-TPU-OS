@@ -36,7 +36,8 @@ Format the SD-card into two partitions-one for root file system(rootfs), the oth
 * Download [boot](https://github.com/embedeep/Free-TPU)  
 *git clone https://github.com/embedeep/Free-TPU  
 * Download [rootfs](https://github.com/embedeep/Free-TPU-OS)  
-*git clone https://github.com/embedeep/Free-TPU-OS*    
+*git clone https://github.com/embedeep/Free-TPU-OS*  
+*User can open URL in the rootfs/baidu_disk.txt, and download the root file system from Baidu Drive. Otherwise, download the rootfs from Google Drive by open URL in the rootfs/google_drive.txt.*  
 * mount SD-card, then untar the rootfs to the rootfs partition(/dev/sdc2), and cp boot files to boot patition.  
   *mkdir rootfs && mount /dev/sdc2 rootfs*  
   *cd Ubuntu && cat rootfs_ubuntu16.\* > rootfs_ubuntu16.tar.gz && tar xzf rootfs_ubuntu16.tar.gz -C rootfs*  
@@ -52,6 +53,8 @@ Prepare The development board, and set board boot from SD-card. Then insert the 
 Connect the UART to your PC, and open the serial Terminal([putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html "Download putty"), or the other serial terminals). Set the baudrate to 115200, then power-on the board.
 ### 3.2 Configure network
 Make sure the network cable inserted. Based on step 3.1, on the serial terminal Enter:  
+*ifconfig #check the network*  
+or configure the network:  
 *ifconfig eth0 xxx.xxx.xxx.xxx*  
 *ifconfig eth0 up*
 ### 3.3 Connect SSH and upload bin  
