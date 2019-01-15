@@ -18,7 +18,10 @@ Format the SD-card into two partitions-one for root file system(rootfs), the oth
 ![](https://github.com/embedeep/Free-TPU-OS/blob/master/images/fdisk_bootn.png)
 * Enable boot partition bootable  
 *Enter "a"*    
-![](https://github.com/embedeep/Free-TPU-OS/blob/master/images/fdisk_boota.png) 
+![](https://github.com/embedeep/Free-TPU-OS/blob/master/images/fdisk_boota.png)  
+* Change a partition's system id   
+*Enter "t" -> "c"*  
+![](https://github.com/embedeep/Free-TPU-OS/blob/master/images/fdisk_boott.png) 
 * Create root partition  
 *Enter "n" -> all default*  
 ![](https://github.com/embedeep/Free-TPU-OS/blob/master/images/fdisk_rootfsn.png) 
@@ -54,4 +57,4 @@ Make sure the network cable inserted. Based on step 3.1, on the serial terminal 
 ### 3.3 Connect SSH and upload bin  
 As above, user can copy execution bins to rootfs, and run the EEP-program on the serial terminal. Alternative, user can connect the system running on the board with SSH:  
 *ssh username@xxx.xxx.xxx.xxx(ipaddr)*  
-Login in SSH, user upload the bin and execute it on the SSH terminal.
+Login in SSH, user can upload the bin and execute it on the SSH terminal.
