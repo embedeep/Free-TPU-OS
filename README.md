@@ -48,7 +48,7 @@ Format the SD-card into two partitions-one for root file system(rootfs), the oth
 *User can open URL in the rootfs/baidu_disk.txt, and download the root file system from Baidu Drive. Otherwise, download the rootfs from Google Drive by open URL in the rootfs/google_drive.txt.*  
 * mount SD-card, then untar the rootfs to the rootfs partition(/dev/sdc2), and cp boot files to boot patition.  
   *mkdir rootfs && mount /dev/sdc2 rootfs*  
-  *cd Ubuntu && cat rootfs_ubuntu16.\* > rootfs_ubuntu16.tar.gz && tar xzf rootfs_ubuntu16.tar.gz -C rootfs*  
+  *cd Ubuntu && cat xxxxx.gz\* > xxxxx.tar.gz && tar xzf xxxxx.tar.gz -C rootfs*  
   *mkdir boot && mount /dev/sdc1 boot*  
   *cp bootfiles boot*  
   *umount boot rootfs*
@@ -79,5 +79,28 @@ Login in SSH, user can upload the bin and execute it on the SSH terminal.
 
 # Appendix-PS configuration     
 
-
-
+Board|ZC702|Zedboard
+:---:|:---:|:---:
+FPGA|XC7Z020-CLG484-1|XC7Z020-CLG484-1
+PS-FREQ|666.66MHz|666.66MHz
+PS-SPI 0|No|No
+PS-SPI 0|No|No
+PS-I2C 0|Yes|No
+PS-I2C 1|No|No
+PS-CAN 0|Yes|No
+PS-CAN 1|No|No
+PS-UART 0|No|No
+PS-UART 1|Yes|Yes
+PS-GPIO|Yes|Yes
+PS-SD 0|Yes|No
+PS-SD 1|No|No
+PS-USB 0|Yes|Yes
+PS-USB 1|No|No
+PS-ENET 0|Yes|Yes
+PS-ENET 1|No|No
+PS-SRAM/NOR|No|No
+PS-NAND|No|No
+PS-QSPI|Yes|Yes
+Memory Part|MT41J256M8 HX-15E|MT41J128M16 HA-15E
+---
+Note: Yes indicates APU configured with the peripheral; No indicates APU configured without the peripheral.
