@@ -102,5 +102,4 @@ PS-SRAM/NOR|No|No
 PS-NAND|No|No
 PS-QSPI|Yes|Yes
 Memory Part|MT41J256M8 HX-15E|MT41J128M16 HA-15E
----
 Note: Yes indicates APU configured with the peripheral; No indicates APU configured without the peripheral.
