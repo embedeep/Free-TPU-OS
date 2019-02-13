@@ -103,4 +103,4 @@ PS-SRAM/NOR|**No**|**No**|**No**
 PS-NAND|**No**|**No**|**No**
 PS-QSPI|**Yes**|**Yes**|**Yes**    
 
-**Note**: Yes indicates APU configured with the peripheral; No indicates APU configured without the peripheral.
+**Note**: **Yes** indicates APU configured with the peripheral; **No** indicates APU configured without the peripheral.
