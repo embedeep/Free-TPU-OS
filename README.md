@@ -86,21 +86,21 @@ Memory Part|MT41J256M8 HX-15E|MT41J128M16 HA-15E|MT41K256M16 RE-125
 PS-FREQ|666.66MHz|666.66MHz|666.66MHz
 PS-SPI 0|**No**|**No**|**No**
 PS-SPI 0|**No**|**No**|**No**
-PS-I2C 0|**Yes**|**No**|**No**
+PS-I2C 0|**`Yes`**|**No**|**No**
 PS-I2C 1|**No**|**No**|**No**
-PS-CAN 0|**Yes**|**No**|**No**
+PS-CAN 0|**`Yes`**|**No**|**No**
 PS-CAN 1|**No**|**No**|**No**
 PS-UART 0|**No**|**No**|**No**
-PS-UART 1|**Yes**|**Yes**|**Yes**
-PS-GPIO|**Yes**|**Yes**|**No**
-PS-SD 0|**Yes**|**No**|**Yes**
-PS-SD 1|**No**|**No**|**Yes**
-PS-USB 0|**Yes**|**Yes**|**Yes**
+PS-UART 1|**`Yes`**|**`Yes`**|**`Yes`**
+PS-GPIO|**`Yes`**|**`Yes`**|**No**
+PS-SD 0|**`Yes`**|**No**|**`Yes`**
+PS-SD 1|**No**|**No**|**`Yes`**
+PS-USB 0|**`Yes`**|**`Yes`**|**`Yes`**
 PS-USB 1|**No**|**No**|**No**
-PS-ENET 0|**Yes**|**Yes**|**Yes**
+PS-ENET 0|**`Yes`**|**`Yes`**|**`Yes`**
 PS-ENET 1|**No**|**No**|**No**
 PS-SRAM/NOR|**No**|**No**|**No**
 PS-NAND|**No**|**No**|**No**
-PS-QSPI|**Yes**|**Yes**|**Yes**    
+PS-QSPI|**`Yes`**|**`Yes`**|**`Yes`**    
 
 **Note**: **Yes** indicates APU configured with the peripheral; **No** indicates APU configured without the peripheral.
