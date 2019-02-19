@@ -48,7 +48,7 @@ Format the SD-card into two partitions-one for root file system(rootfs), the oth
 *User can open URL in the rootfs/baidu_disk.txt, and download the root file system from Baidu Drive. Otherwise, download the rootfs from Google Drive by open URL in the rootfs/google_drive.txt.*  
 * mount SD-card, then untar the rootfs to the rootfs partition(/dev/sdc2), and cp boot files to boot patition.  
   *mkdir rootfs && mount /dev/sdc2 rootfs*   
-  *tar -xzf xxx.tar.gz -C rootfs*  
+  *tar --strip-components=1 -C rootfs -xzpf xxx.tar.gz boot*  
   If there are multi gz files, then use the command:   
   *cat xxx.gz\* > xxx.tar.gz && tar xzf xxxxx.tar.gz -C rootfs*  
   *mkdir boot && mount /dev/sdc1 boot*  
