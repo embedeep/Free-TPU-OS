@@ -76,6 +76,7 @@ or configure the network:
 As above, user can copy execution bins to rootfs, and run the EEP-program on the serial terminal. Alternative, user can connect the system running on the board with SSH:  
 *ssh username@xxx.xxx.xxx.xxx(ipaddr)*  
 Login in SSH, user can upload the bin and execute it on the SSH terminal.  
+**NOTE:** Maybe you should start SSH service manually by run "sudo /etc/init.d/ssh start.  
 
 <a name="appendix"></a>
 
