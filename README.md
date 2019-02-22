@@ -61,7 +61,7 @@ Format the SD-card into two partitions-one for root file system(rootfs), the oth
     ```
     git clone https://github.com/embedeep/Free-TPU-OS
     ``` 
-    **NOTE:**User can open URL in the rootfs/baidu_disk.txt, and download the root file system from Baidu Drive. Otherwise, download the rootfs from Google Drive by open URL in the rootfs/google_drive.txt.  
+    **NOTE:** User can open URL in the rootfs/baidu_disk.txt, and download the root file system from Baidu Drive. Otherwise, download the rootfs from Google Drive by open URL in the rootfs/google_drive.txt.  
 * mount SD-card, then untar the rootfs to the rootfs partition(/dev/sdc2), and cp boot files to boot patition.  
   ```
   mkdir rootfs && mount /dev/sdc2 rootfs   
