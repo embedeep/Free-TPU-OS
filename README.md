@@ -57,15 +57,11 @@ mkfs.ext4 -L root /dev/sdc2
 
 ## 2. Copy OS
 
-* Download [boot](https://github.com/embedeep/Free-TPU)  
-```
-git clone https://github.com/embedeep/Free-TPU
-```  
-* Download [rootfs](https://github.com/embedeep/Free-TPU-OS)  
-```
-git clone https://github.com/embedeep/Free-TPU-OS
-``` 
-*User can open URL in the rootfs/baidu_disk.txt, and download the root file system from Baidu Drive. Otherwise, download the rootfs from Google Drive by open URL in the rootfs/google_drive.txt.*  
+* Download [boot&rootfs](https://github.com/embedeep/Free-TPU-OS)  
+    ```
+    git clone https://github.com/embedeep/Free-TPU-OS
+    ``` 
+    **NOTE:**User can open URL in the rootfs/baidu_disk.txt, and download the root file system from Baidu Drive. Otherwise, download the rootfs from Google Drive by open URL in the rootfs/google_drive.txt.  
 * mount SD-card, then untar the rootfs to the rootfs partition(/dev/sdc2), and cp boot files to boot patition.  
   ```
   mkdir rootfs && mount /dev/sdc2 rootfs   
@@ -82,9 +78,9 @@ git clone https://github.com/embedeep/Free-TPU-OS
   umount boot rootfs
   ```
 * (optional) You can download ALL Free-TPU bin files from BaiDu Cloud (Extraction code: w462). And copy to rootfs user home dirctory  
-```
-cp (Free-TPU bin files) rootfs/home/username
-```
+    ```
+    cp (Free-TPU bin files) rootfs/home/username
+    ```
 
 <a name="system"></a>
 
@@ -96,7 +92,8 @@ Prepare The development board, and set board boot from SD-card. Then insert the 
 Connect the UART to your PC, and open the serial Terminal([putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html "Download putty"), or the other serial terminals). Set the baudrate to 115200, then power-on the board.
 ### 3.2 Configure network
 Make sure the network cable inserted. Based on step 3.1, on the serial terminal Enter:  
-```ifconfig #check the network
+```
+ifconfig #check the network
 ```
 or configure the network:  
 ```
