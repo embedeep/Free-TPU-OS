@@ -13,46 +13,46 @@ Free TPU OS is linux system running on the zyqn-7000 FPGA.Users can run the Free
 
 Format the SD-card into two partitions-one for root file system(rootfs), the other one for boot. Skip this step, if you have format the SD-card. Otherwise, do as following(run as a root):  
 * check SD-card partition(Mine is /dev/sdc)  
-```
-fdisk -l   
-```  
+    ```
+    fdisk -l   
+    ```  
 
-![](https://github.com/embedeep/Free-TPU-OS/blob/master/images/fdisk_l.png)  
+    ![](https://github.com/embedeep/Free-TPU-OS/blob/master/images/fdisk_l.png)  
 * Start to partition  
-```
-fdisk /dev/sdc    
-```
-![](https://github.com/embedeep/Free-TPU-OS/blob/master/images/fdisk_sdc.png)  
+    ```
+    fdisk /dev/sdc    
+    ```
+    ![](https://github.com/embedeep/Free-TPU-OS/blob/master/images/fdisk_sdc.png)  
 * Create boot partition  
-```
-Enter "n" -> "p" -> default -> +200M(size of boot partition)   
-```
-![](https://github.com/embedeep/Free-TPU-OS/blob/master/images/fdisk_bootn.png)
+    ```
+    Enter "n" -> "p" -> default -> +200M(size of boot partition)   
+    ```
+    ![](https://github.com/embedeep/Free-TPU-OS/blob/master/images/fdisk_bootn.png)
 * Enable boot partition bootable  
-```
-Enter "a"
-```    
-![](https://github.com/embedeep/Free-TPU-OS/blob/master/images/fdisk_boota.png)  
+    ```
+    Enter "a"
+    ```    
+    ![](https://github.com/embedeep/Free-TPU-OS/blob/master/images/fdisk_boota.png)  
 * Change a partition's system id   
-```
-Enter "t" -> "c"
-``` 
-![](https://github.com/embedeep/Free-TPU-OS/blob/master/images/fdisk_boott.png) 
+    ```
+    Enter "t" -> "c"
+    ``` 
+    ![](https://github.com/embedeep/Free-TPU-OS/blob/master/images/fdisk_boott.png) 
 * Create root partition  
-```
-Enter "n" -> all default
-```  
-![](https://github.com/embedeep/Free-TPU-OS/blob/master/images/fdisk_rootfsn.png) 
+    ```
+    Enter "n" -> all default
+    ```  
+    ![](https://github.com/embedeep/Free-TPU-OS/blob/master/images/fdisk_rootfsn.png) 
 * Finish the partition  
-```
-Enter "w"
-```
-![](https://github.com/embedeep/Free-TPU-OS/blob/master/images/fdisk_f.png)
+    ```
+    Enter "w"
+    ```
+    ![](https://github.com/embedeep/Free-TPU-OS/blob/master/images/fdisk_f.png)
 * Format the partition  
-```
-mkfs.vfat -F 32 -s 2 -n boot /dev/sdc1
-mkfs.ext4 -L root /dev/sdc2
-```
+    ```
+    mkfs.vfat -F 32 -s 2 -n boot /dev/sdc1
+    mkfs.ext4 -L root /dev/sdc2
+    ```
 <a name="OS"></a>
 
 ## 2. Copy OS
