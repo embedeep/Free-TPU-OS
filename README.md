@@ -61,7 +61,7 @@ Format the SD-card into two partitions-one for root file system(rootfs), the oth
     ```
     git clone https://github.com/embedeep/Free-TPU-OS
     ``` 
-    **NOTE:** User can open URL in the rootfs/baidu_disk.txt, and download the root file system from Baidu Drive. Otherwise, download the rootfs from Google Drive by open URL in the rootfs/google_drive.txt.  
+    **NOTE:** User can open URL in the rootfs/baidu_disk.txt, and download the root file system from [Baidu Drive](https://pan.baidu.com/s/1d406FvnoEpAiwspuKBJEhw)(passwd:yan2). Otherwise, download the rootfs from Google Drive by open URL in the rootfs/google_drive.txt.  
 * mount SD-card, then untar the rootfs to the rootfs partition(/dev/sdc2), and cp boot files to boot patition.  
   ```
   mkdir rootfs && mount /dev/sdc2 rootfs   
@@ -86,7 +86,7 @@ Format the SD-card into two partitions-one for root file system(rootfs), the oth
 
 ## 3. Start Linux system
 
-Prepare the FPGA development board, and set board boot from SD-card. Then insert the SD-card, start the system.  
+Prepare the FPGA development board, and set board boot from SD-card. Then insert the SD-card, start the system. For raspberry, username is **pi**, passwd is **raspberry**. 
 
 ### 3.1 Connect UART
 Connect the UART to your PC, and open the serial terminal([putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html "Download putty"), or the other serial terminals). Set the baudrate to 115200, then power-on the board. Now user can control the system from serial terminal
