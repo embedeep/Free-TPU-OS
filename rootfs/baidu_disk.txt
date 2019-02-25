@@ -1,5 +1,2 @@
 # Raspberry OS
 URL: https://pan.baidu.com/s/1d406FvnoEpAiwspuKBJEhw ; PASSWD: yan2
-
-# linaro Ubuntu OS
-URL: https://pan.baidu.com/s/1KlrT-SokqnWMLQIl9Jvr-g ; PASSWD: 8y8j
