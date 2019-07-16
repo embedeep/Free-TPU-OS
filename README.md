@@ -127,7 +127,7 @@ PS-CAN 1|**No**|**No**|**No**
 PS-UART 0|**No**|**No**|**No**
 PS-UART 1|**`Yes`**|**`Yes`**|**`Yes`**
 PS-GPIO|**`Yes`**|**`Yes`**|**No**
-PS-SD 0|**`Yes`**|**No**|**`Yes`**
+PS-SD 0|**`Yes`**|**`Yes`**|**`Yes`**
 PS-SD 1|**No**|**No**|**`Yes`**
 PS-USB 0|**`Yes`**|**`Yes`**|**`Yes`**
 PS-USB 1|**No**|**No**|**No**
